@@ -37,7 +37,10 @@
         Back to Events
     </a>
  
-
+   <div>
+    <h3>Scan to view this event:</h3>
+    {!! QrCode::size(200)->generate(url('/events/' . $event->id)) !!}
+</div>
 
     <!-- Right side: Booking form -->
     @auth
