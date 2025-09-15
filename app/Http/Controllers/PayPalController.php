@@ -17,7 +17,7 @@ class PayPalController extends Controller
         $this->paypal = $paypal;
     }
 
-    // Step 1: Create order and redirect to PayPal
+    // Create order and redirect to PayPal
     public function pay(Request $request)
     {
         $bookingId = $request->booking_id;
@@ -57,7 +57,7 @@ class PayPalController extends Controller
         }
     }
 
-    // Step 2: Capture order after approval
+    //  Capture order after approval
     public function success(Request $request)
     {
         $bookingId = $request->get('booking_id');
